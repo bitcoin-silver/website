@@ -53,16 +53,13 @@
 
                     <ul [class.expanded]="expanded === 1">
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Blockchain and Bitcoin Silver</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Frequently Asked Questions</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Roadmap</a>
                         </li>
                     </ul>
 
@@ -70,10 +67,6 @@
                         <img src="https://placehold.co/1200x558" />
                     </aside>
                 </div>
-            </li>
-
-            <li>
-                <a href="https://github.com/bitcoin-silver" target="_blank">Developers</a>
             </li>
 
             <li>
@@ -96,13 +89,13 @@
 
                     <ul [class.expanded]="expanded === 2">
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Silver Chain</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Silver Wallet</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">PayStream</a>
                         </li>
                     </ul>
 
@@ -130,15 +123,9 @@
                         </div>
                     </article>
 
-                    <ul [class.expanded]="expanded === 2">
+                    <ul [class.expanded]="expanded === 3">
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                            <a href="https://discord.com/invite/MCGn7dzvgd" target="_blank">Discord</a>
                         </li>
                     </ul>
 
@@ -149,8 +136,45 @@
             </li>
 
             <li>
+                <span>
+                    <a [ngClass]="{ 'expanded': expanded === 4 }">Downloads</a>
+                    @if (expanded !== 4) {
+                    <p (click)="expanded = isMobile ? 4 : null">&#9660;</p>
+                    }
+                </span>
+
+                <div [ngClass]="{ 'expanded': expanded === 4 }">
+                    <article>
+                        <h1>Downloads</h1>
+                        <p>Your gateway to Bitcoin Silver resources</p>
+                    </article>
+
+                    <ul [class.expanded]="expanded === 4">
+                        <li>
+                            <a href="https://github.com/silverlabs-org/bitcoinsilver_core/releases/download/v1.0.2/bitcoinsilver-android.apk" target="_blank">Silver Wallet</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/silverlabs-org/bitcoinsilver_core/releases/download/v1.0.2/bitcoinsilver-linux.tar.gz" target="_blank">Linux Wallet</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/silverlabs-org/bitcoinsilver_core/releases/download/v1.0.2/bitcoinsilver-windows.zip" target="_blank">Windows Wallet</a>
+                        </li>
+                    </ul>
+
+                    <aside>
+                        <img src="https://placehold.co/1200x558" />
+                    </aside>
+                </div>
+            </li>
+
+            <li>
+                <a href="https://github.com/bitcoin-silver" target="_blank">Developers</a>
+            </li>
+<!--
+            <li>
                 <a href="#" target="_blank">PayStream</a>
             </li>
+-->
         </ul>
     </nav>
 </ng-template>

@@ -15,6 +15,6 @@ export class HomeComponent {
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Home - Bitcoin Silver');
+    this.titleService.setTitle('Blockchain built on Trust and Value | Bitcoin Silver');
   }
 }

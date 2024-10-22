@@ -14,6 +14,6 @@ export class CommunityComponent {
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Community - Bitcoin Silver');
+    this.titleService.setTitle('Community | Bitcoin Silver');
   }
 }

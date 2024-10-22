@@ -14,6 +14,6 @@ export class LearnComponent {
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Learn - Bitcoin Silver');
+    this.titleService.setTitle('Learn | Bitcoin Silver');
   }
 }

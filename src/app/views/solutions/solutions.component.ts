@@ -14,6 +14,6 @@ export class SolutionsComponent {
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Solutions - Bitcoin Silver');
+    this.titleService.setTitle('Solutions | Bitcoin Silver');
   }
 }

@@ -9,4 +9,5 @@ export const routes: Routes = [
     { path: 'learn', component: LearnComponent },
     { path: 'solutions', component: SolutionsComponent },
     { path: 'community', component: CommunityComponent },
+    { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
