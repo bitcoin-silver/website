@@ -73,6 +73,10 @@
             </li>
 
             <li>
+                <a href="https://github.com/bitcoin-silver" target="_blank">Developers</a>
+            </li>
+
+            <li>
                 <span>
                     <a [ngClass]="{ 'expanded': expanded === 2 }" [routerLink]="['/solutions']"
                         (click)="isMobileMenuOpen = false">Solutions</a>
@@ -87,6 +91,42 @@
                         <p>Innovative blockchain solutions for the future of digital currency</p>
                         <div>
                             <a [routerLink]="['/solutions']" (click)="isMobileMenuOpen = false">Learn more</a>
+                        </div>
+                    </article>
+
+                    <ul [class.expanded]="expanded === 2">
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                    </ul>
+
+                    <aside>
+                        <img src="https://placehold.co/1200x558" />
+                    </aside>
+                </div>
+            </li>
+
+            <li>
+                <span>
+                    <a [ngClass]="{ 'expanded': expanded === 3 }" [routerLink]="['/community']"
+                        (click)="isMobileMenuOpen = false">Community</a>
+                    @if (expanded !== 3) {
+                    <p (click)="expanded = isMobile ? 3 : null">&#9660;</p>
+                    }
+                </span>
+
+                <div [ngClass]="{ 'expanded': expanded === 3 }">
+                    <article>
+                        <h1>Community</h1>
+                        <p>Connecting and engaging with the community</p>
+                        <div>
+                            <a [routerLink]="['/community']" (click)="isMobileMenuOpen = false">Learn more</a>
                         </div>
                     </article>
 
