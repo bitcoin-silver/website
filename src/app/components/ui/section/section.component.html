@@ -1,0 +1,16 @@
+<section [ngClass]="{ 'reverse': reverse, 'cinema': cinema }">
+    <aside>
+        <img [src]="image" />
+    </aside>
+    <article [ngStyle]="{'background-color': 'var(' + color + ')'}">
+        <div>
+            <h2 [ngClass]="{ 'underline': content }">{{ title }}</h2>
+            @if (content) {
+            <p>{{ content }}</p>
+            }
+            @if (action) {
+            <app-button title="Learn More" [link]="action"></app-button>
+            }
+        </div>
+    </article>
+</section>

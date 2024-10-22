@@ -1,0 +1,365 @@
+aside {
+    height: 128px;
+}
+
+aside.compact {
+    height: 64px;
+}
+
+header {
+    background: var(--background-color);
+    transition: height .25s;
+    flex-direction: row;
+    padding: 0 192px;
+    position: fixed;
+    display: flex;
+    height: 128px;
+    width: 100vw;
+    z-index: 98;
+    top: 0;
+}
+
+header.compact {
+    flex-direction: row-reverse;
+    height: 64px;
+}
+
+header>.logo {
+    align-items: flex-end;
+    padding: 0 0 35px 0;
+    display: flex;
+    height: 100%;
+    width: 220px;
+}
+
+header.compact>.logo {
+    align-items: center;
+    padding: 0;
+    order: 1;
+}
+
+header.compact>.logo {
+    width: 164px;
+}
+
+header>.logo>a {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+header>.logo>a>img {
+    width: 100%;
+}
+
+header>.navigation {
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+}
+
+header.compact>.navigation {
+    flex-direction: row;
+}
+
+header>.navigation>.shortcuts {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0;
+    display: flex;
+}
+
+header>.navigation>.shortcuts>a {
+    font-size: 14px;
+}
+
+header.compact>.navigation>.shortcuts {
+    order: 3;
+}
+
+header>.navigation>.categories {
+    justify-content: flex-end;
+    display: flex;
+    flex: 1;
+}
+
+header.compact>.navigation>.categories {
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+header>.navigation .mobile-navigation {
+    background-color: var(--background-color);
+    height: calc(100vh - 100px);
+    flex-direction: column;
+    transition: right .5s;
+    position: absolute;
+    overflow-y: auto;
+    display: flex;
+    width: 100%;
+    top: 100px;
+    right: -100%;
+}
+
+header>.navigation .mobile-navigation.visible {
+    right: 0;
+}
+
+header.compact>.navigation .mobile-navigation {
+    height: calc(100vh - 64px);
+    top: 64px;
+}
+
+nav {
+    height: 100%;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+nav>ul {
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+}
+
+nav>ul>li,
+nav>ul>li>div>ul>li {
+    list-style: none;
+}
+
+nav>ul>li>span>a {
+    display: block;
+    height: 100%;
+}
+
+nav>ul>li>span>p {
+    color: var(--accent-color-dark);
+    text-align: right;
+    cursor: pointer;
+    padding: 0 5px;
+    display: none;
+}
+
+nav>ul>li {
+    margin: 0 0 0 20px;
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+nav>ul>li:hover::after {
+    background: var(--accent-color-dark);
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 50%;
+    content: '';
+    bottom: 0;
+    left: 25%;
+}
+
+nav.compact>ul>li {
+    align-items: center;
+}
+
+nav>ul>li:hover>div {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+nav>ul>li>div {
+    border-top: 5px solid var(--accent-color-dark);
+    background: var(--background-color);
+    pointer-events: none;
+    min-height: 300px;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+    top: 128px;
+    left: 0;
+}
+
+nav.compact>ul>li>div {
+    top: 64px;
+}
+
+nav>ul>li>div>article,
+nav>ul>li>div>ul,
+nav>ul>li>div>aside {
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+}
+
+nav>ul>li>div>article {
+    background: var(--accent-color-darker);
+    padding: 50px 0 50px 192px;
+    width: 30%;
+}
+
+nav>ul>li>div>article>h1 {
+    color: var(--accent-color);
+}
+
+nav>ul>li>div>article>p {
+    padding: 20px 0;
+}
+
+nav>ul>li>div>article>div>a {
+    color: var(--accent-color);
+}
+
+nav>ul>li>div>article>div>a:hover {
+    color: var(--text-color);
+}
+
+nav>ul>li>div>ul {
+    padding: 50px 25px;
+    width: 30%;
+}
+
+nav>ul>li>div>ul>li {
+    padding: 0 0 10px 0;
+}
+
+nav>ul>li>div>aside {
+    justify-content: right;
+    padding: 50px 192px 50px 0;
+    width: 40%;
+}
+
+nav>ul>li>div>aside>img {
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1080px) {
+    aside {
+        height: 100px;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    header,
+    header.compact {
+        padding: 0 20px;
+    }
+
+    header>.logo {
+        padding: 0 0 15px 0;
+        width: 150px;
+    }
+
+    header.compact>.logo {
+        width: 120px;
+        padding: 0;
+    }
+
+    header>.navigation>.shortcuts {
+        padding: 20px 0 10px 0;
+    }
+
+    header.compact>.navigation>.shortcuts {
+        padding: 0;
+        order: 2;
+        flex: 1;
+    }
+
+    header.compact>.navigation>.categories {
+        flex: none;
+        order: 3;
+    }
+
+    header>.navigation>.categories>a {
+        font-size: 28px;
+    }
+
+    header.compact>.navigation>.categories>a {
+        margin: 0 0 0 25px;
+    }
+
+    nav {
+        background: var(--accent-color-darker);
+        overflow-y: auto;
+        min-height: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav>ul>li {
+        border-bottom: 1px solid var(--accent-color);
+        flex-direction: column;
+        padding: 10px 0;
+        display: flex;
+        margin: 0;
+    }
+
+    nav.compact>ul>li {
+        align-items: flex-start;
+    }
+
+    nav>ul>li>span {
+        justify-content: space-between;
+        display: flex;
+        width: 100%;
+    }
+
+    nav>ul>li>span>a.expanded {
+        color: var(--accent-color);
+    }
+
+    nav>ul>li>span>p {
+        display: block;
+    }
+
+    nav>ul>li>div {
+        pointer-events: auto;
+        background: none;
+        position: static;
+        min-height: auto;
+        display: none;
+        border: none;
+        width: 100%;
+        opacity: 1;
+    }
+
+    nav>ul>li>div.expanded {
+        display: block;
+    }
+
+    nav>ul>li>div>ul {
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+    }
+
+    nav>ul>li>div>ul.expanded {
+        padding: 0 0 10px 0;
+        height: auto;
+    }
+
+    nav>ul>li>div>ul.expanded>li {
+        padding: 10px 0 0 0;
+    }
+
+    nav>ul>li>div>article {
+        display: none;
+    }
+
+    nav>ul>li>div>aside {
+        display: none;
+    }
+}

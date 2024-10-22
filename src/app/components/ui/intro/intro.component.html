@@ -1,0 +1,13 @@
+<section [ngClass]="{ 'large': large }">
+    <img *ngIf="image && !video" [src]="image" alt="{{ title }}" />
+    <video *ngIf="image && video" muted="true" loop [poster]="image" autoplay>
+        <source [src]="video" type="video/mp4">
+    </video>
+    <article>
+        <div>
+            <h1 [class.compact]="description === null" lang="en">{{ title }}</h1>
+            <h2 *ngIf="description" lang="en">{{ description }}</h2>
+        </div>
+    </article>
+</section>
+<aside></aside>

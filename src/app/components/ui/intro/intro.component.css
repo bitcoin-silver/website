@@ -1,0 +1,83 @@
+section {
+    align-items: flex-end;
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    height: 50vh;
+    width: 100%;
+}
+
+section.large {
+    height: calc(100vh - 248px);
+}
+
+section>img,
+section>video {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+section>article {
+    background: var(--foreground-color);
+    width: calc(100% - 192px);
+    padding: 10px 0 10px 10px;
+    position: absolute;
+    min-width: 320px;
+    bottom: -100px;
+    right: 0;
+}
+
+section>article>div {
+    background-color: var(--background-color);
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+}
+
+section>article>div>h1,
+section>article>div>h2 {
+    border-top: 1px solid var(--foreground-color-dark);
+    padding: 10px;
+}
+
+section>article>div>h1 {
+    color: var(--foreground-color);
+    text-transform: uppercase;
+    hyphens: auto;
+}
+
+section>article>div>h1.compact {
+    border: none;
+    width: 75%;
+}
+
+section>article>div>h2 {
+    color: var(--foreground-color-dark);
+}
+
+aside {
+    background: linear-gradient(to right, var(--accent-color-dark), var(--accent-color-darker));
+    height: 120px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1080px) {
+    section {
+        height: 30vh;
+    }
+
+    section.large {
+        height: 50vh;
+    }
+
+    section>article>div>h1 {
+        font-size: 24px;
+    }
+}

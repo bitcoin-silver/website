@@ -1,0 +1,116 @@
+<aside [ngClass]="{ 'compact': isCompact }"></aside>
+
+<header [ngClass]="{ 'compact': isCompact }">
+    <div class="logo">
+        <a href="http://bitcoin-silver.com">
+            <img src="assets/images/logo.png" />
+        </a>
+    </div>
+
+    <div class="navigation">
+        <div class="shortcuts">
+            <a (click)="switchLanguage('en')" [class.active]="language === 'en'">EN</a>
+            <!--
+            <hr>
+            <a (click)="switchLanguage('de')" [class.active]="language === 'de'">DE</a>
+            -->
+        </div>
+
+        <div class="categories">
+            @if (isMobile) {
+            <a (click)="isMobileMenuOpen = !isMobileMenuOpen">{{ isMobileMenuOpen ? '&#x2715;' : '&#9776;' }}</a>
+            <div class="mobile-navigation" [class.visible]="isMobileMenuOpen">
+                <ng-container *ngTemplateOutlet="sharedLinks"></ng-container>
+            </div>
+            }
+            @else {
+            <ng-container *ngTemplateOutlet="sharedLinks"></ng-container>
+            }
+        </div>
+    </div>
+</header>
+
+<ng-template #sharedLinks>
+    <nav [ngClass]="{ 'compact': isCompact }">
+        <ul>
+            <li>
+                <span>
+                    <a [ngClass]="{ 'expanded': expanded === 1 }" [routerLink]="['/learn']"
+                        (click)="isMobileMenuOpen = false">Learn</a>
+                    @if (expanded !== 1) {
+                    <p (click)="expanded = isMobile ? 1 : null">&#9660;</p>
+                    }
+                </span>
+
+                <div [ngClass]="{ 'expanded': expanded === 1 }">
+                    <article>
+                        <h1>Learn</h1>
+                        <p>Advancing technologies for better lives</p>
+                        <div>
+                            <a [routerLink]="['/learn']" (click)="isMobileMenuOpen = false">Learn more</a>
+                        </div>
+                    </article>
+
+                    <ul [class.expanded]="expanded === 1">
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                    </ul>
+
+                    <aside>
+                        <img src="https://placehold.co/1200x558" />
+                    </aside>
+                </div>
+            </li>
+
+            <li>
+                <span>
+                    <a [ngClass]="{ 'expanded': expanded === 2 }" [routerLink]="['/solutions']"
+                        (click)="isMobileMenuOpen = false">Solutions</a>
+                    @if (expanded !== 2) {
+                    <p (click)="expanded = isMobile ? 2 : null">&#9660;</p>
+                    }
+                </span>
+
+                <div [ngClass]="{ 'expanded': expanded === 2 }">
+                    <article>
+                        <h1>Solutions</h1>
+                        <p>Innovative blockchain solutions for the future of digital currency</p>
+                        <div>
+                            <a [routerLink]="['/solutions']" (click)="isMobileMenuOpen = false">Learn more</a>
+                        </div>
+                    </article>
+
+                    <ul [class.expanded]="expanded === 2">
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Lorem ipsum</a>
+                        </li>
+                    </ul>
+
+                    <aside>
+                        <img src="https://placehold.co/1200x558" />
+                    </aside>
+                </div>
+            </li>
+
+            <li>
+                <a href="#" target="_blank">PayStream</a>
+            </li>
+        </ul>
+    </nav>
+</ng-template>

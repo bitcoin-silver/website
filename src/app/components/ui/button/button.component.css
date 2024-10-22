@@ -1,0 +1,12 @@
+a {
+    border-radius: 10px 5px 10px 5px;
+    display: inline-block;
+    padding: 12.5px 25px;
+    transition: all .5s;
+    margin: 20px 0;
+}
+
+a:hover {
+    color: var(--text-color);
+    filter: brightness(1.25);
+}

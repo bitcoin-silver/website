@@ -1,0 +1,78 @@
+section {
+    padding: 0 0 20px 0;
+    display: flex;
+}
+
+section>aside {
+    position: relative;
+    min-width: 50%;
+}
+
+section.cinema>aside {
+    min-width: 60%;
+}
+
+section.reverse>aside {
+    order: 2;
+}
+
+section>aside>img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+section>article {
+    padding: 25px 192px 25px 25px;
+    min-height: 240px;
+    flex: 1;
+}
+
+section.reverse>article {
+    padding: 25px 25px 25px 192px;
+    order: 1;
+}
+
+section>article>div {
+    width: 100%;
+}
+
+section>article>div>h2 {
+    padding: 0 0 20px 0;
+}
+
+section>article>div>h2.underline {
+    border-bottom: 1px solid var(--text-color);
+}
+
+section>article>div>p {
+    padding: 20px 0;
+    line-height: 2;
+}
+
+@media only screen and (max-width: 1080px) {
+    section {
+        flex-direction: column;
+    }
+
+    section>aside {
+        min-height: 200px;
+    }
+
+    section.reverse>aside {
+        order: 1;
+    }
+
+    section>article {
+        padding: 20px;
+    }
+
+    section.reverse>article {
+        padding: 20px;
+        order: 2;
+    }
+}

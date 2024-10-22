@@ -1,0 +1,86 @@
+:root {
+    --background-color: #000000;            /* Schwarz */
+    --foreground-color: #c0c0c0;            /* Hellgrau */
+    --foreground-color-light: #e0e0e0;      /* Helles Grau */
+    --foreground-color-dark: #a0a0a0;       /* Dunkles Grau */
+    --accent-color: #18FFFF;                /* Aqua-Blau */
+    --accent-color-dark: #008391;           /* Dunkles Aqua-Blau */
+    --accent-color-darker: #002c31;         /* Sehr dunkles Aqua-Blau */
+    --border-color: #4d4d4d;                /* Grau für Rahmen */
+    --secondary-background-color: #1c1c1c;  /* Dunkler Hintergrund */
+    --highlight-color: #ff4081;             /* Pink für Hervorhebung */
+    --highlight-color-light: #ff79b0;       /* Helles Pink */
+    --highlight-color-dark: #c60055;        /* Dunkles Pink */
+    --success-color: #4CAF50;               /* Grün für Erfolge */
+    --warning-color: #F7A600;               /* Orange für Warnungen */
+    --error-color: #F44336;                 /* Rot für Fehler */
+    --info-color: #2196F3;                  /* Blau für Informationen */
+    --muted-color: #777777;                 /* Gedämpftes Grau */
+    --text-color: #FFFFFF;                  /* Weißer Text für Kontrast */
+    --link-color: #18FFFF;                  /* Akzentfarbe für Links */
+    --link-hover-color: #00B2A0;            /* Dunkleres Aqua-Blau für Hover */
+}
+
+@font-face {
+    font-family: 'Afacad Flux';
+    src: url('/assets/fonts/afacadflux.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Afacad Flux', sans-serif;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 42px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 36px;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.active,
+a:hover {
+    color: var(--accent-color);
+}
+
+hr {
+    color: var(--text-color);
+    pointer-events: none;
+    margin: 0 10px;
+    height: 12px;
+}
