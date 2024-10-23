@@ -5,7 +5,7 @@ Welcome to the official website of Bitcoin Silver! This site provides informatio
 
 ## 📖 Table of Contents
 
-- [About Bitcoin Silver](#about-bitcoin-silver)
+- [About Bitcoin Silver](#about-bitcoinsilver)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -22,7 +22,7 @@ To run the website locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/bitcoin-silver/website.git
+   git clone https://github.com/bitcoinsilver/website.git
    ```
 2. **Navigate into the directory**:
    ```bash
@@ -65,4 +65,4 @@ We welcome contributions from the community! If you would like to contribute, pl
 This project is licensed under the MIT License. See the LICENSE file for details.
 Contact
 
-##### For questions or inquiries, feel free to reach us through our website or email us at info@bitcoin-silver.com.
+##### For questions or inquiries, feel free to reach us through our website or email us at info@bitcoinsilver.top.

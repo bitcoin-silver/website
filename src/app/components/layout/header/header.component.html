@@ -2,7 +2,7 @@
 
 <header [ngClass]="{ 'compact': isCompact }">
     <div class="logo">
-        <a href="http://bitcoin-silver.com">
+        <a href="http://bitcoinsilver.top">
             <img src="assets/images/logo.png" />
         </a>
     </div>
@@ -94,9 +94,11 @@
                         <li>
                             <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Silver Wallet</a>
                         </li>
+                        <!--
                         <li>
                             <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">PayStream</a>
                         </li>
+                        -->
                     </ul>
 
                     <aside>
@@ -151,13 +153,13 @@
 
                     <ul [class.expanded]="expanded === 4">
                         <li>
-                            <a href="https://github.com/silverlabs-org/bitcoinsilver_core/releases/download/v1.0.2/bitcoinsilver-android.apk" target="_blank">Silver Wallet</a>
+                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-android.apk" target="_blank">Silver Wallet</a>
                         </li>
                         <li>
-                            <a href="https://github.com/silverlabs-org/bitcoinsilver_core/releases/download/v1.0.2/bitcoinsilver-linux.tar.gz" target="_blank">Linux Wallet</a>
+                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-linux.tar.gz" target="_blank">Linux Wallet</a>
                         </li>
                         <li>
-                            <a href="https://github.com/silverlabs-org/bitcoinsilver_core/releases/download/v1.0.2/bitcoinsilver-windows.zip" target="_blank">Windows Wallet</a>
+                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-windows.zip" target="_blank">Windows Wallet</a>
                         </li>
                     </ul>
 

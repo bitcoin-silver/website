@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bitcoin-silver.com": {
+    "bitcoinsilver.top": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/bitcoin-silver.com",
+            "outputPath": "dist/bitcoinsilver.top",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "bitcoin-silver.com:build:production"
+              "buildTarget": "bitcoinsilver.top:build:production"
             },
             "development": {
-              "buildTarget": "bitcoin-silver.com:build:development"
+              "buildTarget": "bitcoinsilver.top:build:development"
             }
           },
           "defaultConfiguration": "development"

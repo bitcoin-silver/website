@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'bitcoin-silver.com' title`, () => {
+  it(`should have the 'bitcoinsilver.top' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('bitcoin-silver.com');
+    expect(app.title).toEqual('bitcoinsilver.top');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, bitcoin-silver.com');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, bitcoinsilver.top');
   });
 });
