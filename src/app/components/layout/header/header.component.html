@@ -34,10 +34,6 @@
     <nav [ngClass]="{ 'compact': isCompact }">
         <ul>
             <li>
-                <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Home</a>
-            </li>
-
-            <li>
                 <span>
                     <a [ngClass]="{ 'expanded': expanded === 1 }" [routerLink]="['/learn']"
                         (click)="isMobileMenuOpen = false">Learn</a>
