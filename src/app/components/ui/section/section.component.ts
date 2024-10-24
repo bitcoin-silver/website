@@ -18,4 +18,5 @@ export class SectionComponent {
   @Input() color: string = '--accent-color-darker';
   @Input() reverse: boolean = false;
   @Input() action: string | null = null;
+  @Input() button: string = 'Learn More';
 }

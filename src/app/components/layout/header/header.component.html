@@ -34,6 +34,10 @@
     <nav [ngClass]="{ 'compact': isCompact }">
         <ul>
             <li>
+                <a [routerLink]="['/']">Home</a>
+            </li>
+
+            <li>
                 <span>
                     <a [ngClass]="{ 'expanded': expanded === 1 }" [routerLink]="['/learn']"
                         (click)="isMobileMenuOpen = false">Learn</a>
@@ -53,18 +57,21 @@
 
                     <ul [class.expanded]="expanded === 1">
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Blockchain and Bitcoin Silver</a>
+                            <a [routerLink]="['/learn']" fragment="blockchain"
+                                (click)="isMobileMenuOpen = false">Blockchain and Bitcoin Silver</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Frequently Asked Questions</a>
+                            <a [routerLink]="['/learn']" fragment="faq" (click)="isMobileMenuOpen = false">Frequently
+                                Asked Questions</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Roadmap</a>
+                            <a [routerLink]="['/learn']" fragment="roadmap"
+                                (click)="isMobileMenuOpen = false">Roadmap</a>
                         </li>
                     </ul>
 
                     <aside>
-                        <img src="https://placehold.co/1200x558" />
+                        <img src="assets/images/learn.jpg" />
                     </aside>
                 </div>
             </li>
@@ -81,7 +88,7 @@
                 <div [ngClass]="{ 'expanded': expanded === 2 }">
                     <article>
                         <h1>Solutions</h1>
-                        <p>Innovative blockchain solutions for the future of digital currency</p>
+                        <p>Innovative solutions for the future</p>
                         <div>
                             <a [routerLink]="['/solutions']" (click)="isMobileMenuOpen = false">Learn more</a>
                         </div>
@@ -89,10 +96,12 @@
 
                     <ul [class.expanded]="expanded === 2">
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Silver Chain</a>
+                            <a [routerLink]="['/solutions']" fragment="blockchain"
+                                (click)="isMobileMenuOpen = false">Blockchain</a>
                         </li>
                         <li>
-                            <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Silver Wallet</a>
+                            <a [routerLink]="['/solutions']" fragment="wallet"
+                                (click)="isMobileMenuOpen = false">Wallet</a>
                         </li>
                         <!--
                         <li>
@@ -102,15 +111,14 @@
                     </ul>
 
                     <aside>
-                        <img src="https://placehold.co/1200x558" />
+                        <img src="assets/images/solutions.jpg" />
                     </aside>
                 </div>
             </li>
 
             <li>
                 <span>
-                    <a [ngClass]="{ 'expanded': expanded === 3 }" [routerLink]="['/community']"
-                        (click)="isMobileMenuOpen = false">Community</a>
+                    <a [ngClass]="{ 'expanded': expanded === 3 }">Community</a>
                     @if (expanded !== 3) {
                     <p (click)="expanded = isMobile ? 3 : null">&#9660;</p>
                     }
@@ -120,19 +128,25 @@
                     <article>
                         <h1>Community</h1>
                         <p>Connecting and engaging with the community</p>
-                        <div>
-                            <a [routerLink]="['/community']" (click)="isMobileMenuOpen = false">Learn more</a>
-                        </div>
                     </article>
 
                     <ul [class.expanded]="expanded === 3">
                         <li>
                             <a href="https://discord.com/invite/MCGn7dzvgd" target="_blank">Discord</a>
                         </li>
+                        <li>
+                            <a href="https://x.com/Bitcoin_Silver_" target="_blank">X (Twitter)</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/BitcoinSilver.BTCS/" target="_blank">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/@bitcoinsilver" target="_blank">Youtube</a>
+                        </li>
                     </ul>
 
                     <aside>
-                        <img src="https://placehold.co/1200x558" />
+                        <img src="assets/images/community.jpg" />
                     </aside>
                 </div>
             </li>
@@ -153,18 +167,21 @@
 
                     <ul [class.expanded]="expanded === 4">
                         <li>
-                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-android.apk" target="_blank">Silver Wallet</a>
+                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-android.apk"
+                                target="_blank">Silver Wallet</a>
                         </li>
                         <li>
-                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-linux.tar.gz" target="_blank">Linux Wallet</a>
+                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-linux.tar.gz"
+                                target="_blank">Linux Wallet</a>
                         </li>
                         <li>
-                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-windows.zip" target="_blank">Windows Wallet</a>
+                            <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-windows.zip"
+                                target="_blank">Windows Wallet</a>
                         </li>
                     </ul>
 
                     <aside>
-                        <img src="https://placehold.co/1200x558" />
+                        <img src="assets/images/downloads.jpg" />
                     </aside>
                 </div>
             </li>
@@ -172,7 +189,7 @@
             <li>
                 <a href="https://github.com/bitcoin-silver" target="_blank">Developers</a>
             </li>
-<!--
+            <!--
             <li>
                 <a href="#" target="_blank">PayStream</a>
             </li>

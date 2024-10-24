@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { IntroComponent } from "../../components/ui/intro/intro.component";
+import { SectionComponent } from "../../components/ui/section/section.component";
 
 @Component({
   selector: 'app-learn',
   standalone: true,
-  imports: [IntroComponent],
+  imports: [IntroComponent, SectionComponent],
   templateUrl: './learn.component.html',
   styleUrls: ['./learn.component.css']
 })

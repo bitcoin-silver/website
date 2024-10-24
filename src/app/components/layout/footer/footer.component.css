@@ -1,6 +1,6 @@
 footer {
     background: var(--accent-color-dark);
-    padding: 25px 192px 50px 192px;
+    padding: 50px 192px;
     flex-direction: row;
     display: flex;
     width: 100%;
@@ -27,27 +27,77 @@ footer>.logo>a>img {
 
 footer>.links {
     flex-direction: column;
-    background: rgba(0, 0, 0, .5);
     height: 100px;
     display: flex;
     flex: 1;
 }
 
+footer>.links>.internal,
+footer>.links>.external {
+    flex-direction: row;
+    display: flex;
+}
+
+footer>.links>.internal {
+    margin: 0 0 25px 0;
+}
+
+footer>.links>.internal>a {
+    font-size: 20px;
+}
+
+footer>.links>.internal>a:not(:first-child),
+footer>.links>.external>a:not(:first-child) {
+    margin: 0 0 0 20px;
+}
+
+footer>.links>p {
+    color: var(--foreground-color);
+    font-size: 14px;
+}
+
+footer>.links>.external>a {
+    color: var(--accent-color);
+}
+
+footer>.links>.external>a:hover {
+    color: var(--text-color);
+}
+
 aside {
     background: var(--accent-color-darker);
     padding: 10px 192px 50px 192px;
+    display: flex;
     width: 100%;
 }
 
+aside>p {
+    color: var(--foreground-color);
+    font-size: 14px;
+}
+
 aside>div {
-    background: rgba(255, 255, 255, .5);
-    height: 32px;
-    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    flex: 1;
+}
+
+aside>div>a>svg {
+    color: var(--foreground-color);
+    height: 16px;
+}
+
+aside>div>a {
+    margin: 0 0 0 10px;
+}
+
+aside>div>a>svg:hover {
+    color: var(--accent-color);
 }
 
 @media only screen and (max-width: 1080px) {
     footer {
-        padding: 25px 20px 50px 20px;
+        padding: 50px 20px;
         flex-direction: column;
     }
 

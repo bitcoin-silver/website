@@ -1,1 +1,6 @@
-<a [routerLink]="[link]" [ngStyle]="{'background-color': 'var(' + color + ')'}">{{ title }}</a>
+@if (isRemote) {
+    <a href="{{ link }}" target="_blank" [ngStyle]="{'background-color': 'var(' + color + ')'}">{{ title }}</a>
+}
+@else {
+    <a [routerLink]="[link]" [ngStyle]="{'background-color': 'var(' + color + ')'}">{{ title }}</a>
+}

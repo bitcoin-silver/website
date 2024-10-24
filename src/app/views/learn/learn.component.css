@@ -1,0 +1,54 @@
+article {
+    background: var(--background-color);
+    padding: 0 192px 50px 192px;
+    display: flex;
+    width: 100%;
+}
+
+article.odd {
+    background: var(--accent-color-darker);
+}
+
+article>div {
+    flex: 1;
+}
+
+article>div:last-child {
+    margin: 0 0 0 50px;
+}
+
+article>div>h3 {
+    margin: 0 0 20px 0;
+}
+
+article>div>p {
+    margin: 0 0 25px 0;
+}
+
+article>div>p.uppercase {
+    text-transform: uppercase;
+}
+
+h2 {
+    padding: 50px 192px 10px 192px;
+}
+
+h2.odd {
+    background: var(--accent-color-darker);
+}
+
+@media only screen and (max-width: 1080px) {
+    article {
+        padding: 0 20px 50px 20px;
+        flex-direction: column;
+    }
+
+    article>div:last-child {
+        margin: 0;
+    }
+
+    h2 {
+        padding: 50px 20px 10px 20px;
+    }
+    
+}

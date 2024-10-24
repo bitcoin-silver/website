@@ -14,4 +14,16 @@ export class ButtonComponent {
   @Input() title: string = '';
   @Input() color: string = '--border-color';
   @Input() link: string = '/';
+
+  isRemote: boolean = false;
+
+  ngOnInit(): void {
+    if (this.isValidHttpUrl(this.link)) {
+      this.isRemote = true;
+    }
+  }
+
+  isValidHttpUrl(urlString: string): boolean {
+    return /^https?:\/\//i.test(urlString);
+  }
 }

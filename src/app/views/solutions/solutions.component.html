@@ -1,4 +1,31 @@
 <section>
-    <app-intro title="Solutions" description="Innovative blockchain solutions for the future of digital currency"
-        image="https://placehold.co/1920x1080"></app-intro>
+    <app-intro title="Solutions" description="Innovative solutions for the future"
+        image="assets/images/solutions.jpg"></app-intro>
+    <app-section id="blockchain" image="assets/images/blockchain.jpg" [cinema]="false" title="Blockchain"
+        content="Bitcoin Silver is a cryptocurrency forked from Bitcoin, designed to enhance transaction speed, security, and user experience. It addresses Bitcoin's scalability issues by implementing a modified consensus mechanism for faster block generation and higher transaction capacity. The blockchain utilizes advanced cryptographic techniques, ensuring a secure environment for digital assets. Bitcoin Silver also emphasizes decentralization, allowing community participation in the validation process to foster trust and reduce central control. Overall, Bitcoin Silver aims to offer a more accessible and efficient alternative in the cryptocurrency space, appealing to both investors and everyday users."
+        color="--info-color" [reverse]="false" action="https://github.com/bitcoin-silver"></app-section>
+    <article>
+        <div>
+            <h3>Algorithm:<br>SHA256</h3>
+            <p>Using the SHA256 algorithm to ensure secure and efficient hashing.</p>
+        </div>
+        <div>
+            <h3>Block Time:<br>5 Minutes</h3>
+            <p>Fast block generation time for quicker transaction confirmations.</p>
+        </div>
+        <div>
+            <h3>Coin Maturity:<br>200 Blocks</h3>
+            <p>Coins become spendable after 200 blocks to enhance network security.</p>
+        </div>
+        <div>
+            <h3>Maximum Supply:<br>21,470,000 BTCS</h3>
+            <p>Capped supply to maintain value and avoid inflation.</p>
+        </div>
+    </article>
+    <app-section id="wallet" image="assets/images/wallet.jpg" [cinema]="false" title="Wallet"
+        content="Our mobile wallet prioritizes user security by generating private keys offline, ensuring maximum protection for your cryptocurrencies. This offline key generation significantly reduces the risk of exposure to online threats, keeping your digital assets safe. The wallet allows you to easily send and receive cryptocurrencies while maintaining full control over your private keys. With a user-friendly interface, you can quickly access your funds, check balances, and track transactions on the go. Designed for security and convenience, our mobile wallet provides a reliable solution for managing your cryptocurrencies safely and efficiently."
+        color="--accent-color-darker" [reverse]="true" action="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-android.apk" button="Download now"></app-section>
+    <app-section image="assets/images/community.jpg" [cinema]="false" title="Get Started Now!"
+        content="Join us in revolutionizing the digital commodity asset concept and blockchain space. Start your journey with BTCS today and become a part of our community-driven project. Discover how you can contribute, participate, and benefit from a transparent and innovative digital asset ecosystem."
+        color="--info-color" [reverse]="false" action="/learn"></app-section>
 </section>
