@@ -34,7 +34,7 @@
     <nav [ngClass]="{ 'compact': isCompact }">
         <ul>
             <li>
-                <a [routerLink]="['/']">Home</a>
+                <a [routerLink]="['/']" (click)="isMobileMenuOpen = false">Home</a>
             </li>
 
             <li>
