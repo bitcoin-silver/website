@@ -1,6 +1,6 @@
 <section [ngClass]="{ 'reverse': reverse, 'cinema': cinema }">
     <aside>
-        <img [src]="image" />
+        <img loading="lazy" [src]="image" />
     </aside>
     <article [ngStyle]="{'background-color': 'var(' + color + ')'}">
         <div>

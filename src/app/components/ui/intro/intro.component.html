@@ -1,11 +1,11 @@
 <section [ngClass]="{ 'large': large }">
-    <img *ngIf="image && !video" [src]="image" alt="{{ title }}" />
+    <img *ngIf="image && !video" loading="lazy" [src]="image" alt="{{ title }}" />
     <video *ngIf="image && video" muted="true" loop [poster]="image" autoplay>
         <source [src]="video" type="video/mp4">
     </video>
     @if (large && image && video) {
     <div>
-        <img src="assets/images/logo_big.png" />
+        <img loading="lazy" src="assets/images/logo_big.png" />
     </div>
     }
     <article>
