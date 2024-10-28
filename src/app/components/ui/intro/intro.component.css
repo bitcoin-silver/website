@@ -36,6 +36,7 @@ section>div>img {
     bottom: -50px;
     right: -50px;
     height: 100%;
+    width: auto;
     opacity: .5;
 }
 
