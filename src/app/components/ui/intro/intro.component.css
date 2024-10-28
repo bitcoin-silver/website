@@ -24,6 +24,7 @@ section>video {
 
 section>div {
     position: relative;
+    text-align: right;
     overflow: hidden;
     height: 100%;
     width: 100%;
@@ -31,11 +32,11 @@ section>div {
 
 section>div>img {
     transition: opacity 1s;
-    position: absolute;
+    position: relative;
     overflow: hidden;
+    max-height: 100%;
     bottom: -50px;
     right: -50px;
-    height: 100%;
     width: auto;
     opacity: .5;
 }
