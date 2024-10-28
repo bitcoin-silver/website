@@ -3,11 +3,6 @@
     <video *ngIf="image && video" muted="true" loop [poster]="image" autoplay>
         <source [src]="video" type="video/mp4">
     </video>
-    @if (large && image && video) {
-    <div>
-        <img loading="lazy" src="assets/images/logo_big.png" />
-    </div>
-    }
     <article>
         <div>
             <h1 [class.compact]="description === null" lang="en">{{ title }}</h1>

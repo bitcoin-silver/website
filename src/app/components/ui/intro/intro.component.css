@@ -22,29 +22,6 @@ section>video {
     top: 0;
 }
 
-section>div {
-    position: relative;
-    text-align: right;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
-
-section>div>img {
-    transition: opacity 1s;
-    position: relative;
-    overflow: hidden;
-    max-height: 100%;
-    bottom: -50px;
-    right: -50px;
-    width: auto;
-    opacity: .5;
-}
-
-section>div>img:hover {
-    opacity: .75;
-}
-
 section>article {
     background: var(--foreground-color);
     width: calc(100% - 192px);
@@ -98,10 +75,6 @@ aside {
 
     section.large {
         height: 50vh;
-    }
-
-    section>div>img {
-        top: -50px;
     }
 
     section>article>div>h1 {
