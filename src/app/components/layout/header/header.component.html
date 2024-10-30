@@ -65,10 +65,7 @@
                                 (click)="isMobileMenuOpen = false">Roadmap</a>
                         </li>
                         <li>
-                            <a href="https://bitstorage.finance/spot/trading/BTCSUSDT" target="_blank">Exchange (Bitstorage)</a>
-                        </li>
-                        <li>
-                            <a href="https://app.exbitron.com/exchange/?market=BTCS-USDT" target="_blank">Exchange (Exbitron)</a>
+                            <a href="http://explorer.btcs.pools4mining.com:3001/" target="_blank">Explorer</a>
                         </li>
                     </ul>
 
@@ -120,7 +117,7 @@
 
             <li>
                 <span>
-                    <a [ngClass]="{ 'expanded': expanded === 3 }">Community</a>
+                    <a [ngClass]="{ 'expanded': expanded === 3 }">Invest</a>
                     @if (expanded !== 3) {
                     <p (click)="expanded = isMobile ? 3 : null">&#9660;</p>
                     }
@@ -128,11 +125,40 @@
 
                 <div [ngClass]="{ 'expanded': expanded === 3 }">
                     <article>
+                        <h1>Invest</h1>
+                        <p>Financial security and growth for everyone</p>
+                    </article>
+
+                    <ul [class.expanded]="expanded === 3">
+                        <li>
+                            <a href="https://bitstorage.finance/spot/trading/BTCSUSDT" target="_blank">Bitstorage</a>
+                        </li>
+                        <li>
+                            <a href="https://app.exbitron.com/exchange/?market=BTCS-USDT" target="_blank">Exbitron</a>
+                        </li>
+                    </ul>
+
+                    <aside>
+                        <img src="assets/images/technology.jpg" />
+                    </aside>
+                </div>
+            </li>
+
+            <li>
+                <span>
+                    <a [ngClass]="{ 'expanded': expanded === 4 }">Community</a>
+                    @if (expanded !== 4) {
+                    <p (click)="expanded = isMobile ? 4 : null">&#9660;</p>
+                    }
+                </span>
+
+                <div [ngClass]="{ 'expanded': expanded === 4 }">
+                    <article>
                         <h1>Community</h1>
                         <p>Connecting and engaging with the community</p>
                     </article>
 
-                    <ul [class.expanded]="expanded === 3">
+                    <ul [class.expanded]="expanded === 4">
                         <li>
                             <a href="https://discord.com/invite/MCGn7dzvgd" target="_blank">Discord</a>
                         </li>
@@ -155,19 +181,19 @@
 
             <li>
                 <span>
-                    <a [ngClass]="{ 'expanded': expanded === 4 }">Downloads</a>
-                    @if (expanded !== 4) {
-                    <p (click)="expanded = isMobile ? 4 : null">&#9660;</p>
+                    <a [ngClass]="{ 'expanded': expanded === 5 }">Downloads</a>
+                    @if (expanded !== 5) {
+                    <p (click)="expanded = isMobile ? 5 : null">&#9660;</p>
                     }
                 </span>
 
-                <div [ngClass]="{ 'expanded': expanded === 4 }">
+                <div [ngClass]="{ 'expanded': expanded === 5 }">
                     <article>
                         <h1>Downloads</h1>
                         <p>Your gateway to Bitcoin Silver resources</p>
                     </article>
 
-                    <ul [class.expanded]="expanded === 4">
+                    <ul [class.expanded]="expanded === 5">
                         <li>
                             <a href="https://github.com/bitcoin-silver/core/releases/download/v1.0.2/bitcoinsilver-android.apk"
                                 target="_blank">Mobile Wallet</a>
