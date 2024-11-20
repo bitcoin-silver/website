@@ -5,7 +5,7 @@
     --foreground-color-dark: #a0a0a0;       /* Dunkles Grau */
     --accent-color: #18FFFF;                /* Aqua-Blau */
     --accent-color-dark: #008391;           /* Dunkles Aqua-Blau */
-    --accent-color-darker: #002c31;         /* Sehr dunkles Aqua-Blau */
+    --accent-color-darker: #333333;         /* Sehr dunkles Aqua-Blau */
     --border-color: #4d4d4d;                /* Grau für Rahmen */
     --secondary-background-color: #1c1c1c;  /* Dunkler Hintergrund */
     --highlight-color: #ff4081;             /* Pink für Hervorhebung */
